@@ -1,0 +1,93 @@
+
+<div class="image" >
+<div class="container">
+<form [formGroup]="profileForm" (click)="goToRedirect(username.value, password.value)">
+    
+  <div class="row" style="margin-top: 230px;">
+  <div class="col-sm-6 col-md-6 col-lg-6" >
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6" style="text-align:center;color: white;" >
+    <label >
+      UserName <span class="star">*</span>
+      </label>
+  </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6" >
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6" style="text-align:center" >
+    
+      <input #username type="text" class="inputBox" formControlName="firstName" pattern="[a-zA-Z ]*">
+    
+    </div>
+    
+  </div>
+    
+    
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6" >
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6" style="text-align:center;margin-top: 10px;color: white;" >
+        <div *ngIf="profileForm.controls['firstName'].errors && !profileForm.controls['firstName'].pristine" class="error-msg">
+        <div [hidden]="!profileForm.controls['firstName'].errors.required">UserName is required.</div>
+        <div [hidden]="!profileForm.controls['firstName'].errors.minlength">min length is 5.</div>
+        <div [hidden]="!profileForm.controls['firstName'].errors.pattern">enter only letters</div>
+      </div>
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6" >
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6" style="text-align:center;margin-top: 10px;color: white;" >
+    <label >
+      Password <span class="star">*</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6" >
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6" style="text-align:center" >
+    <input class="inputBox" #password  type="password" formControlName="lastName" pattern="[a-zA-Z ]*">
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6" >
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6" style="text-align:center;margin-top: 10px;color: white;" >
+    <div *ngIf="profileForm.controls['lastName'].errors && !profileForm.controls['lastName'].pristine" class="error-msg">
+        <div [hidden]="!profileForm.controls['lastName'].errors.required">Password is required.</div>
+        <div [hidden]="!profileForm.controls['lastName'].errors.minlength">min length is 5.</div>
+        <div [hidden]="!profileForm.controls['lastName'].errors.pattern">enter only letters</div>
+      </div>
+    </div>
+  </div>
+
+    <div class="row">
+      <div class="col-sm-6 col-md-6 col-lg-6" >
+      </div>
+      <div class="col-sm-6 col-md-6 col-lg-6" style="text-align:center;margin-top: 20px;" >
+    <div class="form-group">
+        <button type="button" [disabled]="profileForm.invalid" class="opt-secondary" value="submit">Submit</button>
+    </div>
+  </div>
+    </div>
+     
+  </form>
+
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6" >
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6" style="text-align:center;margin-top: 10px;color: white;" >
+  <div  *ngIf="showerror && (!profileForm.get('firstName').untouched &&  !profileForm.get('lastName').untouched)">
+    <span style="text-align:center;margin-top: 10px;color: white;">{{ msg }}</span>
+  </div>
+    </div>
+  </div>
+  </div>
+</div>
