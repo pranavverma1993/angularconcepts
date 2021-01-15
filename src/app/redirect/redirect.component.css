@@ -1,0 +1,9 @@
+.adminImage{
+    height: 120px;
+    width: 300px;
+    outline:0;
+    cursor: pointer;
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+    margin-left: 100px;
+}

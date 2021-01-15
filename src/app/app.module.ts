@@ -10,7 +10,9 @@ import { AuthService } from './shared/Services/auth.service';
 import { SharedModule } from './shared/shared.module';
 import { AuthGuard } from './shared/AuthGuard/auth.guard';
 import {MatInputModule} from '@angular/material/input';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {HttpClientModule} from '@angular/common/http';
+;
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,7 @@ import {MatInputModule} from '@angular/material/input';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,ReactiveFormsModule,FormsModule,SharedModule,MatInputModule
+    BrowserAnimationsModule,ReactiveFormsModule,FormsModule,SharedModule,MatInputModule, NgbModule,HttpClientModule
   ],
   providers: [AuthService,AuthGuard],
   bootstrap: [AppComponent]
