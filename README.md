@@ -1,5 +1,11 @@
 Install Bootstrap and angular material
 
+
+Internaslation
+
+npm install @ngx-translate/core --save
+npm install @ngx-translate/http-loader
+
 Login Credential:
 username:admin
 password:admin
