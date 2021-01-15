@@ -45,9 +45,9 @@
     </div>
     <div class="col-sm-6 col-md-6 col-lg-6" style="margin-top: 10px;color: white;" >
         <div *ngIf="profileForm.controls['firstName'].errors && !profileForm.controls['firstName'].pristine" class="error-msg">
-        <div [hidden]="!profileForm.controls['firstName'].errors.required">UserName is required.</div>
-        <div [hidden]="!profileForm.controls['firstName'].errors.minlength">min length is 5.</div>
-        <div [hidden]="!profileForm.controls['firstName'].errors.pattern">enter only letters</div>
+        <div [hidden]="!profileForm.controls['firstName'].errors.required"> {{ 'HOME.USERNAMEREQUIRED' | translate }}</div>
+        <div [hidden]="!profileForm.controls['firstName'].errors.minlength"> {{ 'HOME.MINLENGTH5' | translate }}</div>
+        <div [hidden]="!profileForm.controls['firstName'].errors.pattern"> {{ 'HOME.ENTERLETTERS' | translate }}</div>
       </div>
   </div>
   </div>
@@ -75,9 +75,9 @@
     </div>
     <div class="col-sm-6 col-md-6 col-lg-6" style="margin-top: 10px;color: white;" >
     <div *ngIf="profileForm.controls['lastName'].errors && !profileForm.controls['lastName'].pristine" class="error-msg">
-        <div [hidden]="!profileForm.controls['lastName'].errors.required">Password is required.</div>
-        <div [hidden]="!profileForm.controls['lastName'].errors.minlength">min length is 5.</div>
-        <div [hidden]="!profileForm.controls['lastName'].errors.pattern">enter only letters</div>
+        <div [hidden]="!profileForm.controls['lastName'].errors.required">{{ 'HOME.PASSWORDREQUIRED' | translate }}</div>
+        <div [hidden]="!profileForm.controls['lastName'].errors.minlength"> {{ 'HOME.MINLENGTH5' | translate }}</div>
+        <div [hidden]="!profileForm.controls['lastName'].errors.pattern"> {{ 'HOME.ENTERLETTERS' | translate }}</div>
       </div>
     </div>
   </div>
@@ -87,7 +87,7 @@
       </div>
       <div class="col-sm-6 col-md-6 col-lg-6" style="margin-top: 20px;padding-left: 45px;" >
     
-      <app-button [buttonDisabled]="profileForm.invalid" [value]="'secondary'">Submit</app-button>
+      <app-button [buttonDisabled]="profileForm.invalid" [value]="'secondary'">{{ 'HOME.SUBMIT' | translate }}  </app-button>
     
   </div>
     </div>
@@ -99,7 +99,7 @@
     </div>
     <div class="col-sm-6 col-md-6 col-lg-6" style="margin-top: 10px;color: white;" >
   <div  *ngIf="showerror && (!profileForm.get('firstName').untouched &&  !profileForm.get('lastName').untouched)">
-    <span style="margin-top: 10px;color: white;">{{ msg }}</span>
+    <span style="margin-top: 10px;color: white;">{{ 'HOME.LOGINERRORMSG' | translate }}</span>
   </div>
     </div>
   </div>

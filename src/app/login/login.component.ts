@@ -10,7 +10,7 @@ import { AuthService } from '../shared/Services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  msg:string='Please Enter the correct details properly';
+  msg:string;
   showerror:boolean=false;
   selectedField = "";
   
@@ -21,11 +21,11 @@ export class LoginComponent implements OnInit {
   }
   constructor(private router : Router, private service : AuthService,public translate: TranslateService) {
 
-    translate.addLangs(['English', 'French']);
+    translate.addLangs(['English', 'French', 'German']);
     translate.setDefaultLang('English');
 
     const browserLang = translate.getBrowserLang();
-    translate.use(browserLang.match(/English|French/) ? browserLang : 'English');
+    translate.use(browserLang.match(/English|French | German/) ? browserLang : 'English');
 
    }
   profileForm:FormGroup

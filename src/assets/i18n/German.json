@@ -1,0 +1,13 @@
+{
+    "HOME": {
+     "SELECT": "Sprache ändern",
+      "USERNAME": "Nutzername",
+      "PASSWORD": "Passwort",
+      "SUBMIT": "einreichen",
+      "USERNAMEREQUIRED": "Benutzername wird benötigt.",
+      "MINLENGTH5": "Die Mindestlänge beträgt 5.",
+      "ENTERLETTERS": "Geben Sie nur Buchstaben ein",
+      "PASSWORDREQUIRED": "Passwort wird benötigt.",
+      "LOGINERRORMSG" : "Bitte geben Sie die richtigen Daten richtig ein"
+    }
+  }
