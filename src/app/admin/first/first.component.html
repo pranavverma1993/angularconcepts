@@ -1,10 +1,10 @@
 <div class="container">
     <div class="row" >
-         <div class="col-sm-10 col-md-10 col-lg-10" style="margin-top: 20px;" >
+         <div class="col-sm-9 col-md-9 col-lg-9" style="margin-top: 20px;" >
          <input type="search" [(ngModel)]="searchText" class="inputBox">
             </div>
-           <div class="col-sm-2 col-md-2 col-lg-2" style="text-align:center;margin-top: 20px" >
-               <app-button [buttonDisabled]="false" [value]="'primary'" (buttonClicked)="logout()">Logout</app-button>  
+           <div class="col-sm-3 col-md-3 col-lg-3" style="text-align:center;margin-top: 20px" >
+               <app-button [buttonDisabled]="false" [value]="'primary'" (buttonClicked)="logout()">{{ 'HOME.LOGOUT' | translate }}</app-button>  
          </div>
          </div> 
          

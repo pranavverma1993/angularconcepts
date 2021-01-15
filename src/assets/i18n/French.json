@@ -8,6 +8,7 @@
       "MINLENGTH5": "La longueur minimale est de 5.",
       "ENTERLETTERS": "Saisissez uniquement des lettres",
       "PASSWORDREQUIRED": "Mot de passe requis.",
-      "LOGINERRORMSG" : "Veuillez saisir correctement les informations correctes"
+      "LOGINERRORMSG" : "Veuillez saisir correctement les informations correctes",
+      "LOGOUT": "Se déconnecter"
     }
   }

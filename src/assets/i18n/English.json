@@ -8,6 +8,7 @@
       "MINLENGTH5": "Min length is 5.",
       "ENTERLETTERS": "Enter Only Letters",
       "PASSWORDREQUIRED": "Password is required.",
-      "LOGINERRORMSG" : "Please Enter the correct details properly"
+      "LOGINERRORMSG" : "Please Enter the correct details properly",
+      "LOGOUT": "Logout"
     }
   }
