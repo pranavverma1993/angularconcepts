@@ -1,0 +1,26 @@
+  [{
+    "country": "Afghanistan",
+    "states": [
+          { "name":"Nurestan", "cities":["city1", "city2", "city3"]  },
+          { "name":"Oruzgan", "cities":["orc1", "oruc2", "oruc3"] },
+          { "name":"Panjshir", "cities":["3c1", "3c2", "3c3"]  }
+        ]
+},
+{
+    "country": "Albania",
+    "states": [ 
+          { "name": "Korce" , "cities":["c1", "c2", "c3"] },
+          { "name": "Kukes",  "cities":["orc1", "oruc2", "oruc3"] },
+          { "name": "Lezhe","cities":["orc1", "oruc2", "oruc3"]},
+          { "name": "Shkoder", "cities":["orc1", "oruc2", "oruc3"]},
+          { "name": "Tirane","cities":["orc1", "oruc2", "oruc3"]}
+        ]
+},      
+{
+    "country": "Antarctica",
+    "states": [
+        { "name": "Korce" , "cities":["c1", "c2", "c3"] },
+          { "name": "Kukes",  "cities":["orc1", "oruc2", "oruc3"] }
+    ]
+}           
+]

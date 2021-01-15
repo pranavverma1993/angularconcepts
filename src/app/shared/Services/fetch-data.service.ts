@@ -13,13 +13,16 @@ export class FetchDataService {
       headers: new HttpHeaders({'content-Type' : 'application/json'})
     };
 
-    dataUrl='assets/Birds.json'
+    dataUrl='assets/Birds.json';
+    dataUrl1='assets/countries.json'
 
     fetchBirds() : Observable<any>{
       return this.https.get(this.dataUrl,this.httpOptions);
     }
 
-
+    fetchCountry() : Observable<any>{
+      return this.https.get(this.dataUrl1,this.httpOptions);
+    }
 
    
 }
