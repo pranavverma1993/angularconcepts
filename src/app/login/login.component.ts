@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormGroup,Validators, FormControl  } from '@angular/forms';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { AuthService } from '../shared/Services/auth.service';
 
 @Component({
@@ -18,7 +19,15 @@ export class LoginComponent implements OnInit {
     this.nameElementRef.nativeElement.focus();
     console.log(this.nameElementRef);
   }
-  constructor(private router : Router, private service : AuthService) { }
+  constructor(private router : Router, private service : AuthService,public translate: TranslateService) {
+
+    translate.addLangs(['English', 'French']);
+    translate.setDefaultLang('English');
+
+    const browserLang = translate.getBrowserLang();
+    translate.use(browserLang.match(/English|French/) ? browserLang : 'English');
+
+   }
   profileForm:FormGroup
   ngOnInit() {
   this.profileForm = new FormGroup({

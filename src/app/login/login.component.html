@@ -4,18 +4,32 @@
 <form [formGroup]="profileForm" (click)="goToRedirect(username.value, password.value)">
     
   <div class="row" style="margin-top: 230px;">
-  <div class="col-sm-6 col-md-6 col-lg-6" >
+  <div class="col-sm-6 col-md-6 col-lg-6"  >
+   
     </div>
     <div class="col-sm-6 col-md-6 col-lg-6" style="color: white;" >
     <label >
-      UserName <span class="star">*</span>
+      {{ 'HOME.USERNAME' | translate }}  
+      <span class="star">*</span>
       </label>
   </div>
   </div>
 
 
   <div class="row">
-    <div class="col-sm-6 col-md-6 col-lg-6" >
+    <div class="col-sm-6 col-md-6 col-lg-6" style="text-align: center;">
+
+      <label style="color: white;">
+        {{ 'HOME.SELECT' | translate }}
+        <select class="selectbox" #langSelect (change)="translate.use(langSelect.value)">
+          <option *ngFor="let lang of translate.getLangs()" [value]="lang" 
+          [selected]="lang === translate.currentLang">
+          {{ lang }}
+        </option>
+        </select>
+      </label>
+  
+  
     </div>
     <div class="col-sm-6 col-md-6 col-lg-6"  >
     
@@ -43,7 +57,7 @@
     </div>
     <div class="col-sm-6 col-md-6 col-lg-6" style="margin-top: 10px;color: white;" >
     <label >
-      Password <span class="star">*</span>
+      {{ 'HOME.PASSWORD' | translate }}  <span class="star">*</span>
       </label>
     </div>
   </div>
@@ -89,5 +103,4 @@
   </div>
     </div>
   </div>
-  
-</div>
+

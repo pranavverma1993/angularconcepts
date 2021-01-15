@@ -11,8 +11,13 @@ import { SharedModule } from './shared/shared.module';
 import { AuthGuard } from './shared/AuthGuard/auth.guard';
 import {MatInputModule} from '@angular/material/input';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {HttpClientModule} from '@angular/common/http';
-;
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient);
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +28,14 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,ReactiveFormsModule,FormsModule,SharedModule,MatInputModule, NgbModule,HttpClientModule
+    BrowserAnimationsModule,ReactiveFormsModule,FormsModule,SharedModule,MatInputModule, NgbModule,HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [AuthService,AuthGuard],
   bootstrap: [AppComponent]
