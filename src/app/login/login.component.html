@@ -33,7 +33,9 @@
     </div>
     <div class="col-sm-6 col-md-6 col-lg-6"  >
     
-      <input #username type="text" name="data" [(ngModel)] = data  class="inputBox" formControlName="firstName" pattern="[a-zA-Z ]*">
+      <input autocomplete="off" #username type="text" name="data" [(ngModel)] = data  
+      (keypress)=checkString($event)
+      class="inputBox" formControlName="firstName" pattern="[a-zA-Z ]*">
     
     </div>
     
@@ -44,6 +46,9 @@
     <div class="col-sm-6 col-md-6 col-lg-6" >
     </div>
     <div class="col-sm-6 col-md-6 col-lg-6" style="margin-top: 10px;color: white;" >
+
+        <span *ngIf="onlyLetters">{{ 'HOME.ENTERLETTERS' | translate }}</span>
+
         <div *ngIf="profileForm.controls['firstName'].errors && !profileForm.controls['firstName'].pristine" class="error-msg">
         <div [hidden]="!profileForm.controls['firstName'].errors.required"> {{ 'HOME.USERNAMEREQUIRED' | translate }}</div>
         <div [hidden]="!profileForm.controls['firstName'].errors.minlength"> {{ 'HOME.MINLENGTH5' | translate }}</div>
@@ -66,7 +71,7 @@
     <div class="col-sm-6 col-md-6 col-lg-6" >
     </div>
     <div class="col-sm-6 col-md-6 col-lg-6" >
-    <input class="inputBox" #password  type="password" formControlName="lastName" pattern="[a-zA-Z ]*">
+    <input (keypress)=checkString($event) class="inputBox" #password  type="password" formControlName="lastName" pattern="[a-zA-Z ]*">
   </div>
   </div>
 
@@ -74,6 +79,7 @@
     <div class="col-sm-6 col-md-6 col-lg-6" >
     </div>
     <div class="col-sm-6 col-md-6 col-lg-6" style="margin-top: 10px;color: white;" >
+      <span *ngIf="onlyLetters">{{ 'HOME.ENTERLETTERS' | translate }}</span>
     <div *ngIf="profileForm.controls['lastName'].errors && !profileForm.controls['lastName'].pristine" class="error-msg">
         <div [hidden]="!profileForm.controls['lastName'].errors.required">{{ 'HOME.PASSWORDREQUIRED' | translate }}</div>
         <div [hidden]="!profileForm.controls['lastName'].errors.minlength"> {{ 'HOME.MINLENGTH5' | translate }}</div>

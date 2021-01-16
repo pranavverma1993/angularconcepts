@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit {
 showchangepwd:Boolean=false;
 changePassword(){
   
-if(this.dataservice.serviceData===undefined){
+if(this.dataservice.serviceData===undefined || this.dataservice.serviceData==""){
   this.showchangepwd=true
 }
 else{
@@ -62,5 +62,11 @@ else{
 
 set data(value: string) { 
   this.dataservice.serviceData = value; 
-} 
+}
+onlyLetters:Boolean=false;
+checkString(event){
+  this.onlyLetters=true;
+return (event.charCode > 64 && 
+    event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)
+}
 }
