@@ -6,6 +6,10 @@ Internaslation
 npm install @ngx-translate/core --save
 npm install @ngx-translate/http-loader
 
+Install ng-bootstrap 
+
+npm install --save @ng-bootstrap/ng-bootstrap
+
 Login Credential:
 username:admin
 password:admin
