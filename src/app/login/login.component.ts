@@ -47,12 +47,18 @@ export class LoginComponent implements OnInit {
       else{
         this.showerror=true;
        }
-}
+};
 
+showchangepwd:Boolean=false;
 changePassword(){
+  
+if(this.dataservice.serviceData===undefined){
+  this.showchangepwd=true
+}
+else{
   this.router.navigateByUrl("/changePassword");
 }
-
+}
 
 set data(value: string) { 
   this.dataservice.serviceData = value; 

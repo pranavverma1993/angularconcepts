@@ -13,7 +13,8 @@
       "LOGOUT": "Logout",
       "CHANGEPWD": "Change Password",
       "CONFIRMPWD": "Confirm Password",
-      "GOTOLOGIN": "Go To Login"
+      "GOTOLOGIN": "Go To Login",
+      "ENTERUSERNAME": "Please Enter UserName"
 
     }
   }

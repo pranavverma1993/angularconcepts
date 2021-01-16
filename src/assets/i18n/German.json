@@ -13,6 +13,7 @@
       "CHANGEPWD": "Passwort ändern",
       "NEWPASSWORD": "Neues Passwort",
       "CONFIRMPWD": "Kennwort bestätigen",
-      "GOTOLOGIN": "Gehen Sie zu Login"
+      "GOTOLOGIN": "Gehen Sie zu Login",
+      "ENTERUSERNAME": "Bitte geben sie einen Benutzernamen ein"
     }
   }
