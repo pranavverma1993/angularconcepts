@@ -3,12 +3,17 @@
      "SELECT": "Change language",
       "USERNAME": "UserName",
       "PASSWORD": "PassWord",
+      "NEWPASSWORD": "New PassWord",
       "SUBMIT": "Submit",
       "USERNAMEREQUIRED": "UserName is required.",
       "MINLENGTH5": "Min length is 5.",
       "ENTERLETTERS": "Enter Only Letters",
       "PASSWORDREQUIRED": "Password is required.",
       "LOGINERRORMSG" : "Please Enter the correct details properly",
-      "LOGOUT": "Logout"
+      "LOGOUT": "Logout",
+      "CHANGEPWD": "Change Password",
+      "CONFIRMPWD": "Confirm Password",
+      "GOTOLOGIN": "Go To Login"
+
     }
   }

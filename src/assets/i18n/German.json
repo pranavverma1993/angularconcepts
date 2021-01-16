@@ -9,6 +9,10 @@
       "ENTERLETTERS": "Geben Sie nur Buchstaben ein",
       "PASSWORDREQUIRED": "Passwort wird benötigt.",
       "LOGINERRORMSG" : "Bitte geben Sie die richtigen Daten richtig ein",
-      "LOGOUT": "Ausloggen"
+      "LOGOUT": "Ausloggen",
+      "CHANGEPWD": "Passwort ändern",
+      "NEWPASSWORD": "Neues Passwort",
+      "CONFIRMPWD": "Kennwort bestätigen",
+      "GOTOLOGIN": "Gehen Sie zu Login"
     }
   }

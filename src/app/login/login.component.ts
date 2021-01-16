@@ -3,6 +3,7 @@ import { FormGroup,Validators, FormControl  } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { AuthService } from '../shared/Services/auth.service';
+import { DataserviceService } from '../shared/Services/dataservice.service';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +20,7 @@ export class LoginComponent implements OnInit {
     this.nameElementRef.nativeElement.focus();
     console.log(this.nameElementRef);
   }
-  constructor(private router : Router, private service : AuthService,public translate: TranslateService) {
+  constructor(private router : Router, private service : AuthService,public translate: TranslateService,private dataservice : DataserviceService) {
 
     translate.addLangs(['English', 'French', 'German']);
     translate.setDefaultLang('English');
@@ -45,9 +46,15 @@ export class LoginComponent implements OnInit {
       }
       else{
         this.showerror=true;
-        
-      
-      }
+       }
 }
 
+changePassword(){
+  this.router.navigateByUrl("/changePassword");
+}
+
+
+set data(value: string) { 
+  this.dataservice.serviceData = value; 
+} 
 }

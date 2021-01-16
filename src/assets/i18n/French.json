@@ -9,6 +9,10 @@
       "ENTERLETTERS": "Saisissez uniquement des lettres",
       "PASSWORDREQUIRED": "Mot de passe requis.",
       "LOGINERRORMSG" : "Veuillez saisir correctement les informations correctes",
-      "LOGOUT": "Se déconnecter"
+      "LOGOUT": "Se déconnecter",
+      "CHANGEPWD": "Changer le mot de passe",
+      "NEWPASSWORD": "Nouveau mot de passe",
+      "CONFIRMPWD": "Confirmez le mot de passe",
+      "GOTOLOGIN": "Aller à la connexion"
     }
   }

@@ -33,7 +33,7 @@
     </div>
     <div class="col-sm-6 col-md-6 col-lg-6"  >
     
-      <input #username type="text" class="inputBox" formControlName="firstName" pattern="[a-zA-Z ]*">
+      <input #username type="text" [(ngModel)] = data  class="inputBox" formControlName="firstName" pattern="[a-zA-Z ]*">
     
     </div>
     
@@ -91,6 +91,16 @@
     
   </div>
     </div>
+
+    <div class="row">
+      <div class="col-sm-6 col-md-6 col-lg-6" >
+      </div>
+      <div class="col-sm-6 col-md-6 col-lg-6" style="margin-top: 10px;padding-left: 45px;color: white;" >
+    
+      <a  (click)="changePassword()">{{ 'HOME.CHANGEPWD' | translate }}</a>
+    
+  </div>
+    </div>
      
   </form>
 
@@ -102,5 +112,19 @@
     <span style="margin-top: 10px;color: white;">{{ 'HOME.LOGINERRORMSG' | translate }}</span>
   </div>
     </div>
+
+
+    <!-- <div> 
+      <h2>Data from A: {{ data }} </h2> 
+      <input [(ngModel)] = data /> 
+      <br><br> 
+      <a [routerLink]="['/changePassword']">Go to B</a> 
+    </div> -->
+
+
+
+
+
+
   </div>
 

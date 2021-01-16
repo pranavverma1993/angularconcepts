@@ -14,6 +14,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -23,6 +24,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     AppComponent,
     LoginComponent,
     RedirectComponent,
+    ChangepasswordComponent,
     
   ],
   imports: [
