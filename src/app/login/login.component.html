@@ -52,7 +52,7 @@
         <div *ngIf="profileForm.controls['firstName'].errors && !profileForm.controls['firstName'].pristine" class="error-msg">
         <div [hidden]="!profileForm.controls['firstName'].errors.required"> {{ 'HOME.USERNAMEREQUIRED' | translate }}</div>
         <div [hidden]="!profileForm.controls['firstName'].errors.minlength"> {{ 'HOME.MINLENGTH5' | translate }}</div>
-        <div [hidden]="!profileForm.controls['firstName'].errors.pattern"> {{ 'HOME.ENTERLETTERS' | translate }}</div>
+        <!-- <div [hidden]="!profileForm.controls['firstName'].errors.pattern"> {{ 'HOME.ENTERLETTERS' | translate }}</div> -->
       </div>
   </div>
   </div>
@@ -83,7 +83,7 @@
     <div *ngIf="profileForm.controls['lastName'].errors && !profileForm.controls['lastName'].pristine" class="error-msg">
         <div [hidden]="!profileForm.controls['lastName'].errors.required">{{ 'HOME.PASSWORDREQUIRED' | translate }}</div>
         <div [hidden]="!profileForm.controls['lastName'].errors.minlength"> {{ 'HOME.MINLENGTH5' | translate }}</div>
-        <div [hidden]="!profileForm.controls['lastName'].errors.pattern"> {{ 'HOME.ENTERLETTERS' | translate }}</div>
+        <!-- <div [hidden]="!profileForm.controls['lastName'].errors.pattern"> {{ 'HOME.ENTERLETTERS' | translate }}</div> -->
       </div>
     </div>
   </div>

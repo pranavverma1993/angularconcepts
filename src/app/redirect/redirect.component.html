@@ -7,5 +7,31 @@
         <div class="col-sm-3 col-md-3 col-lg-3" style="text-align:center;margin-top: 20px" >
             <app-button [buttonDisabled]="false" [value]="'primary'" (buttonClicked)="logout()">{{ 'HOME.LOGOUT' | translate }}</app-button>  
       </div>
-      </div>  
+      </div> 
+
+      <div class="row" >
+      
+
+        <div class="col-sm-3 col-md-3 col-lg-3" style="text-align:center;margin-top: 20px" >
+        <label>firstName</label>
+        <input autocomplete="off"  type="text"  [(ngModel)]="saveEmployeeDetails.firstName">
+        <!-- {{firstName}} -->
+    </div>
+    <div class="col-sm-3 col-md-3 col-lg-3" style="text-align:center;margin-top: 20px" >
+        <label>lastName</label>
+        <input autocomplete="off"  type="text"  [(ngModel)]="saveEmployeeDetails.lastName">
+        <!-- {{lastName}} -->
+        </div>
+</div>
+
+
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6" >
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6" style="margin-top: 20px;padding-left: 45px;" >
+  
+    <app-button [buttonDisabled]="false" (click)="saveEmployee()" [value]="'secondary'">{{ 'HOME.SUBMIT' | translate }}  </app-button>
+  
+</div>
+  </div>
 </div>
