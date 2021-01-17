@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { SaveEmployeeDetails } from '../Entity/employee';
+import { GetEmployeeDetails, SaveEmployeeDetails } from '../Entity/employee';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +22,8 @@ export class FetchDataService {
 
     dataUrl='assets/Birds.json';
     dataUrl1='assets/countries.json';
-    dataUrl2='http://localhost:8080/saveUserData'
+    dataUrl2='http://localhost:8080/saveUserData';
+    dataUrl23='http://localhost:8080/fetchUserData'
 
     fetchBirds() : Observable<any>{
       return this.https.get(this.dataUrl,this.httpOptions);
@@ -33,9 +34,15 @@ export class FetchDataService {
     }
 
     saveEmployee(saveEmployeeDetails : SaveEmployeeDetails) : Observable<any>{
-      const body=JSON.stringify(saveEmployeeDetails);
-      console.log(body)
-      return this.https.post(this.dataUrl2,body,this.httpOptions);
+      // const body=JSON.stringify(saveEmployeeDetails);
+       console.log(saveEmployeeDetails)
+      return this.https.post(this.dataUrl2,saveEmployeeDetails,this.httpOptions);
+    }
+
+    fetchEmployee(getEmployeeDetails : GetEmployeeDetails) : Observable<any>{
+      // const body=JSON.stringify(saveEmployeeDetails);
+       
+      return this.https.post(this.dataUrl23,getEmployeeDetails,this.httpOptions);
     }
    
 }
