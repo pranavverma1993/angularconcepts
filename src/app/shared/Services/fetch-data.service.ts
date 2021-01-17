@@ -23,7 +23,9 @@ export class FetchDataService {
     dataUrl='assets/Birds.json';
     dataUrl1='assets/countries.json';
     dataUrl2='http://localhost:8080/saveUserData';
-    dataUrl23='http://localhost:8080/fetchUserData'
+    dataUrl23='http://localhost:8080/fetchUserData';
+    dataUrlDel='http://localhost:8080/deleteUserData';
+    dataUrlUpdate='http://localhost:8080/updateUserData';
 
     fetchBirds() : Observable<any>{
       return this.https.get(this.dataUrl,this.httpOptions);
@@ -40,9 +42,15 @@ export class FetchDataService {
     }
 
     fetchEmployee(getEmployeeDetails : GetEmployeeDetails) : Observable<any>{
-      // const body=JSON.stringify(saveEmployeeDetails);
-       
       return this.https.post(this.dataUrl23,getEmployeeDetails,this.httpOptions);
     }
    
+    deleteEmployee(getEmployeeDetails : GetEmployeeDetails) : Observable<any>{
+      return this.https.post(this.dataUrlDel,getEmployeeDetails,this.httpOptions);
+    }
+    
+    updateEmployee(saveEmployeeDetails : SaveEmployeeDetails) : Observable<any>{
+      
+      return this.https.post(this.dataUrlUpdate,saveEmployeeDetails,this.httpOptions);
+    }
 }

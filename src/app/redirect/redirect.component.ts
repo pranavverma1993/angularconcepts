@@ -62,8 +62,28 @@ export class RedirectComponent implements OnInit {
   }
 
 
+  deleteEmployee(){
+    this.service.deleteEmployee(this.getEmployeeDetails).subscribe(
+      data => {
+        if (data.responseCode === 0) {
+          alert("deleted")
+        }
+        },
+         error => console.error(error)
+)
 
 
+  }
 
+  updateEmployee(){
+    this.service.updateEmployee(this.saveEmployeeDetails).subscribe(
+      data => {
+        if (data.responseCode === 0) {
+          alert("updated")
+        }
+        },
+         error => console.error(error)
+)
+  }
 
 }
