@@ -31,11 +31,12 @@
 
 
 <div class="row">
-    <div class="col-sm-6 col-md-6 col-lg-6" >
+    <div class="col-sm-6 col-md-6 col-lg-6" style="margin-top: 20px;padding-left: 45px;" >
+      <app-button [buttonDisabled]="false" (click)="updateEmployee()" [value]="'secondary'">updateEmployee </app-button>
     </div>
     <div class="col-sm-6 col-md-6 col-lg-6" style="margin-top: 20px;padding-left: 45px;" >
   
-    <app-button [buttonDisabled]="false" (click)="saveEmployee()" [value]="'secondary'">{{ 'HOME.SUBMIT' | translate }}  </app-button>
+    <app-button [buttonDisabled]="false" (click)="saveEmployee()" [value]="'secondary'">SaveData </app-button>
   
     
 </div>
@@ -50,32 +51,29 @@
       <div class="col-sm-3 col-md-3 col-lg-3" style="text-align:center;margin-top: 20px" >
         <app-button [buttonDisabled]="false" (click)="deleteEmployee()" [value]="'secondary'">DeleteData</app-button>
         
-        <app-button [buttonDisabled]="false" (click)="updateEmployee()" [value]="'secondary'">updateEmployee </app-button>
+        
     </div>
+
+    <div class="col-sm-3 col-md-3 col-lg-3" style="text-align:center;margin-top: 20px" >
+      
+      
+     
+  </div>
   
  <div class="col-sm-3 col-md-3 col-lg-3" style="margin-top: 20px;" >
 
   <app-button [buttonDisabled]="false" (click)="getEmployee()" [value]="'secondary'">GetData</app-button>
     <ul>
      <ol *ngFor=" let item of getEmployeeDetailsOPList">
-          {{item.userName}}
+       <div> <label><b>FirstName: </b></label>  {{item.firstName}}</div>
+     <div><label><b>LastName: </b></label>  {{item.lastName}}</div>
+      
      </ol>
     </ul> 
   </div> 
     </div>
 
 
-   
-    <div class="row">
-      <div class="col-sm-6 col-md-6 col-lg-6" >
-      </div>
-      <div class="col-sm-6 col-md-6 col-lg-6" style="margin-top: 20px;padding-left: 45px;" >
-    
-      
-    
-      
-  </div>
-    </div>
 
 
 
