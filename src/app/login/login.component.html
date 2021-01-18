@@ -71,7 +71,7 @@
     <div class="col-sm-6 col-md-6 col-lg-6" >
     </div>
     <div class="col-sm-6 col-md-6 col-lg-6" >
-    <input (keypress)=checkString($event) class="inputBox" #password  type="password" formControlName="lastName" pattern="[a-zA-Z ]*">
+    <input (keypress)=checkString($event) class="inputBox" #password [(ngModel)] = showPassword type="password" formControlName="lastName" pattern="[a-zA-Z ]*">
   </div>
   </div>
 
@@ -88,7 +88,26 @@
     </div>
   </div>
 
-    <div class="row">
+
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6" >
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6" style="margin-top: 10px;padding-left: 45px;" >
+  
+      <input type="checkbox" (change)="toggleEditable($event)"   >
+  <span style="color: white;">Show Password</span>
+
+</div>
+  </div>
+
+  <div class="row" *ngIf="showPasswordFlag">
+    <div class="col-sm-6 col-md-6 col-lg-6" >
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6" style="margin-top: 10px;color: white;" >
+    {{showPassword}}
+  </div>
+  </div>
+<div class="row">
       <div class="col-sm-6 col-md-6 col-lg-6" >
       </div>
       <div class="col-sm-6 col-md-6 col-lg-6" style="margin-top: 20px;padding-left: 45px;" >
@@ -107,6 +126,7 @@
     
   </div>
     </div>
+   
      
   </form>
 

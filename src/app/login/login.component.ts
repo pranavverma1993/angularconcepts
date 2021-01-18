@@ -14,7 +14,8 @@ export class LoginComponent implements OnInit {
   msg:string;
   showerror:boolean=false;
   selectedField = "";
-  
+  showPassword:String;
+  showPasswordFlag:boolean=false;
   @ViewChild('username', {static: true}) nameElementRef:ElementRef
   ngAfterViewInit(){
     this.nameElementRef.nativeElement.focus();
@@ -69,4 +70,15 @@ checkString(event){
 return (event.charCode > 64 && 
     event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)
 }
+
+
+toggleEditable(event) {
+  if ( event.target.checked ) {
+      this.showPasswordFlag = true;
+ }
+ else{
+  this.showPasswordFlag = false;
+ }
+}
+
 }
