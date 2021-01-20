@@ -88,25 +88,6 @@
     </div>
   </div>
 
-
-  <div class="row">
-    <div class="col-sm-6 col-md-6 col-lg-6" >
-    </div>
-    <div class="col-sm-6 col-md-6 col-lg-6" style="margin-top: 10px;padding-left: 45px;" >
-  
-      <input type="checkbox" (change)="toggleEditable($event)"   >
-  <span style="color: white;">Show Password</span>
-
-</div>
-  </div>
-
-  <div class="row" *ngIf="showPasswordFlag">
-    <div class="col-sm-6 col-md-6 col-lg-6" >
-    </div>
-    <div class="col-sm-6 col-md-6 col-lg-6" style="margin-top: 10px;color: white;" >
-    {{showPassword}}
-  </div>
-  </div>
 <div class="row">
       <div class="col-sm-6 col-md-6 col-lg-6" >
       </div>
@@ -116,19 +97,36 @@
     
   </div>
     </div>
+</form>
 
-    <div class="row">
-      <div class="col-sm-6 col-md-6 col-lg-6" >
-      </div>
-      <div class="col-sm-6 col-md-6 col-lg-6" style="margin-top: 10px;padding-left: 45px;color: white;" >
-    
-      <a  style="cursor:pointer" (click)="changePassword()">{{ 'HOME.CHANGEPWD' | translate }}</a>
-    
-  </div>
+   <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6" >
     </div>
-   
-     
-  </form>
+    <div class="col-sm-6 col-md-6 col-lg-6" style="margin-top: 10px;padding-left: 45px;" >
+  
+      <input type="checkbox" (click)="toggleEditable($event)"   >
+  <span style="color: white;">Show Password</span>
+
+</div>
+  </div>
+
+  <div class="row" *ngIf="showPasswordFlag">
+    <div class="col-sm-6 col-md-6 col-lg-6" >
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6" style="margin-top: 10px;color: white;padding-left: 75px;" >
+    {{showPassword}}
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6" >
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6" style="margin-top: 10px;padding-left: 45px;color: white;" >
+  
+    <a  style="cursor:pointer" (click)="changePassword()">{{ 'HOME.CHANGEPWD' | translate }}</a>
+  
+</div>
+  </div>
 
   <div class="row">
     <div class="col-sm-6 col-md-6 col-lg-6" >
